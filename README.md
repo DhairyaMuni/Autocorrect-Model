@@ -1,47 +1,51 @@
-# Autocorrect System
+# Autocorrect Model
 
-This project implements a simple autocorrect system using Python. The system suggests corrections for misspelled words based on a predefined vocabulary and word probabilities. It uses an algorithm to generate possible edits of a word and selects the most probable correction based on word frequency data.
+### Overview
+This project implements an autocorrect system using Python. It suggests corrections for misspelled words based on a predefined vocabulary and word frequency data. The system uses edit distance calculations to generate possible corrections and selects the most probable word based on word probabilities.
 
-## Features
+### Features
+- **Edit Distance Calculation**: Generates candidate words within an edit distance of 1 or 2 from the input word.
+- **Vocabulary Matching**: Matches candidate words against a predefined vocabulary sourced from an English dictionary CSV file.
+- **Probabilistic Correction**: Selects the most likely correct word based on word frequency probabilities derived from corpus data.
 
-- **Edit Distance Calculation**: The system generates candidate words within an edit distance of 1 or 2 from the input word.
-- **Vocabulary Matching**: It checks the candidate words against a predefined vocabulary.
-- **Probabilistic Correction**: The system selects the most likely correct word based on word probabilities derived from frequency data.
+### Installation
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/DhairyaMuni/Autocorrect-Model.git
+    cd Autocorrect-Model
+    ```
 
-## Installation
+2. Install dependencies:
+    ```bash
+    pip install numpy pandas
+    ```
 
-1. Clone the repository:
+3. Add the English dictionary CSV file in the appropriate directory, or use the link provided below to download it.
 
-   ```bash
-   git clone https://github.com/UllekhPatel/Autocorrect-Model.git
-   cd Autocorrect-Model
-   ```
+### Usage
+- Run the Jupyter notebook:
+    ```bash
+    jupyter notebook autocorrect.ipynb
+    ```
+- Follow the notebook instructions to input a word and receive autocorrect suggestions.
 
-2. Install the required Python packages:
+### Functions
+- **edit1(word)**: Generates all possible edits that are one edit distance away from the input word.
+- **edit2(word)**: Generates all possible edits that are two edits away.
+- **correct_spelling(word, vocabulary, word_probabilities)**: Suggests corrections for the input word based on the provided vocabulary and word probabilities.
 
-   The project primarily uses Python's standard library, so no external dependencies are required. However, if your project evolves to include external packages, you can install them using pip. Here is an example command to install common packages (adjust as needed for your project):
+### Group Contributions
+This project was developed as part of a group effort. My contributions include:
+- Implementing the **edit distance calculation** functions.
+- Working on **probabilistic correction** logic using word frequency data.
+- Testing and debugging the final version of the model.
 
-   ```bash
-   pip install numpy pandas
-   ```
+### Credits
+- [Ullekh Patel](https://github.com/UllekhPatel)
+- [Dhairya](https://github.com/DhairyaMuni)
 
-   *(Note: If you later add dependencies, you can list them in a `requirements.txt` file or directly install them using pip.)*
-
-## Usage
-
-1. Run the Jupyter notebook:
-
-   ```bash
-   jupyter notebook autocorrect.ipynb
-   ```
-
-2. Follow the instructions in the notebook to input a word and receive suggested corrections.
-
-## Functions
-
-- `edit1(word)`: Generates all possible edits that are one edit distance away from the input word.
-- `edit2(word)`: Generates all possible edits that are two edits away from the input word.
-- `correct_spelling(word, vocabulary, word_probabilities)`: Suggests corrections for the input word based on the vocabulary and word probabilities.
+### License
+This project is licensed under the MIT License.
 
 ## Example
 
@@ -52,7 +56,3 @@ When you input a word like `"botes"`, the system may suggest corrections like:
 ```
 
 The system will then select the most probable correction, for example, `"notes"`.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
