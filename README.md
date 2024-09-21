@@ -7,11 +7,10 @@ This project implements an autocorrect system using Python. It suggests correcti
 - **Edit Distance Calculation**: Generates candidate words within an edit distance of 1 or 2 from the input word.
 - **Vocabulary Matching**: Matches candidate words against a predefined vocabulary sourced from an English dictionary CSV file.
 - **Probabilistic Correction**: Selects the most likely correct word based on word frequency probabilities derived from corpus data.
-
 ### Installation
 1. Clone this repository:
     ```bash
-    git clone https://github.com/DhairyaMuni/Autocorrect-Model.git
+    git clone https://github.com/UllekhPatel/Autocorrect-Model.git
     cd Autocorrect-Model
     ```
 
@@ -33,19 +32,6 @@ This project implements an autocorrect system using Python. It suggests correcti
 - **edit1(word)**: Generates all possible edits that are one edit distance away from the input word.
 - **edit2(word)**: Generates all possible edits that are two edits away.
 - **correct_spelling(word, vocabulary, word_probabilities)**: Suggests corrections for the input word based on the provided vocabulary and word probabilities.
-
-### Group Contributions
-This project was developed as part of a group effort. My contributions include:
-- Implementing the **edit distance calculation** functions.
-- Working on **probabilistic correction** logic using word frequency data.
-- Testing and debugging the final version of the model.
-
-### Credits
-- [Ullekh Patel](https://github.com/UllekhPatel)
-- [Dhairya](https://github.com/DhairyaMuni)
-
-### License
-This project is licensed under the MIT License.
 
 ## Example
 
