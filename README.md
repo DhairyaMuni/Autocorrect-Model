@@ -25,7 +25,7 @@ This project implements an autocorrect system using Python. It suggests correcti
 ### Usage
 - Run the Jupyter notebook:
     ```bash
-    jupyter notebook autocorrect.ipynb
+    jupyter notebook Autocorrect_Project.ipynb
     ```
 - Follow the notebook instructions to input a word and receive autocorrect suggestions.
 
